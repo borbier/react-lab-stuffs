@@ -8,19 +8,24 @@ import IdiotCounter from './components/IdiotCounter';
 import Action from './actions';
 import ReduxCounter from './components/ReduxCounter';
 
+const topicStyle = {
+  fontSize: '20px',
+  color: '#581845'
+}
+
 function App(props) {
   return (
     <div>
-      <p>Sample Components with props parsing</p>
+      <p style={topicStyle}>Sample Components with props parsing</p>
       <SampleHeading name="borBier" />
       <hr/>
-      <p>Parsing some props to another components</p>
+      <p style={topicStyle}>Parsing some props to another components</p>
       <SampleComponent1 length={5} width={5} />
       <hr/>
-      <p>Just an idiot counter (with React hook)</p>
+      <p style={topicStyle}>Just an idiot counter (with React hook)</p>
       <IdiotCounter />
       <hr/>
-      <p>Idiot counter (with React Redux)</p>
+      <p style={topicStyle}>Idiot counter (with React Redux)</p>
       <ReduxCounter 
         value={props.counter}
         onIncrement={() => props.increment()}
