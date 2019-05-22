@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import SampleHeading from './components/SampleHeading.jsx';
+import SampleComponent1 from './components/SampleComponent1.jsx';
+import IdiotCounter from './components/IdiotCounter';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>Sample Components with props parsing</p>
+      <SampleHeading name="borBier" />
+      <hr/>
+      <p>Parsing some props to another components</p>
+      <SampleComponent1 length={5} width={5} />
+      <hr/>
+      <p>Just an idiot counter (with React hook)</p>
+      <IdiotCounter />
     </div>
   );
 }
